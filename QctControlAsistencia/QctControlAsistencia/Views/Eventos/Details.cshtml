@@ -1,0 +1,42 @@
+﻿@model QctControlAsistencia.Models.Eventos
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Eventos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IdEmpleado)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IdEmpleado)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Fecha)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Hora)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Hora)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Tevento)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Tevento)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Eventosid">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

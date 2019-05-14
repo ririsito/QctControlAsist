@@ -1,0 +1,53 @@
+﻿@model IEnumerable<QctControlAsistencia.Models.Eventos>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.IdEmpleado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fecha)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Hora)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tevento)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdEmpleado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fecha)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hora)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tevento)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Eventosid">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Eventosid">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Eventosid">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
